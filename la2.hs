@@ -32,11 +32,13 @@ addpolys (p:ps)
 
 -- TODO: implement multpoly to multiply two polynomials
 multpoly::Polynomial->Polynomial->Polynomial
+-- return if either poly is empty
 multpoly xs [] = []
 multpoly [] ys = []
+-- adds the first term multiplied to the second poly, then recurses dropping the first term of xs
 multpoly (x:xs) ys = addpoly (multterm x ys) (multpoly xs ys)
 
-
+-- Multiplies a polynomial term against a polynomial
 multterm::(Coeff, Exp)->Polynomial->Polynomial
 multterm x ys
 	| length ys == 1 = [b]
