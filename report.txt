@@ -1,0 +1,55 @@
+Score: 92
+
+0 coefficients are not stripped from addpoly
+
+addpoly:
+  addpoly [(1,1)] []
+  addpoly [(1,1)] [(1,1)]
+  addpoly [] []
+  addpoly [(2,2), [(1,1)] [(1,1)]
+  addpoly [(2,2), (1,1)] [(2,2)]
+  addpoly [(5,5), (4,4), (3,3)] [(2,2), (1,1), (1,0)]
+  addpoly [(5,5), (4,4), (3,0)] [(6,6), (-5,5), (-4,0)] FAILED [1]
+  addpoly [(-5,5), (-4,4), (-3,0)] [(5,5), (4,4), (3,0)] FAILED [2]
+
+Failures:
+
+  ../la2a_test.hs:30: 
+  1) addpoly: addpoly [(5,5), (4,4), (3,0)] [(6,6), (-5,5), (-4,0)]
+       expected: [(6,6),(4,4),(-1,0)]
+        but got: [(6,6),(0,5),(4,4),(-1,0)]
+
+  ../la2a_test.hs:33: 
+  2) addpoly: addpoly [(-5,5), (-4,4), (-3,0)] [(5,5), (4,4), (3,0)]
+       expected: []
+        but got: [(0,5),(0,4),(0,0)]
+
+Randomized with seed 893687003
+
+Finished in 0.0053 seconds
+8 examples, 2 failures
+
+multpoly:
+  multpoly [(1,1)] []
+  multpoly [(1,1)] [(1,1)]
+  multpoly [] []
+  multpoly [(2,2), [(1,1)] [(1,1)]
+  multpoly [(2,2), (1,1)] [(2,2)]
+  multpoly [(5,5), (4,4), (3,3)] [(2,2), (1,1), (1,0)]
+  multpoly [(5,5), (4,4), (3,0)] [(6,6), (-5,5), (-4,0)]
+  multpoly [(-5,5), (-4,4), (-3,0)] [(5,5), (4,4), (3,0)]
+
+Finished in 0.0018 seconds
+8 examples, 0 failures
+
+
+-----------WARNING AND ERROR OUTPUTS BELOW-----------
+
+
+PolyLA2.hs:29:1: warning: [-Wtabs]
+    Tab character found here, and in four further locations.
+    Please use spaces instead.
+
+PolyLA2.hs:29:1: warning: [-Wtabs]
+    Tab character found here, and in four further locations.
+    Please use spaces instead.
